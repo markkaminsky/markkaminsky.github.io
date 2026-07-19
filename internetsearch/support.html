@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — InternetSearch</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #111;
+      --muted: #555;
+      --rule: #ddd;
+      --bg: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #f2f2f2;
+        --muted: #a8a8a8;
+        --rule: #333;
+        --bg: #111;
+      }
+    }
+    body {
+      margin: 0;
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    ul { padding-left: 1.2rem; }
+    a { color: inherit; }
+    code { font-size: 0.92em; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    nav a { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <h1>Support</h1>
+    <p class="meta">InternetSearch — help for people using the app and for App Review</p>
+
+    <h2>What InternetSearch needs</h2>
+    <ul>
+      <li>iPhone with Apple Intelligence (iPhone 15 Pro or later, or later models that support it)</li>
+      <li>iOS 26 or later</li>
+      <li>Apple Intelligence turned on in System Settings</li>
+    </ul>
+    <p>
+      Without Apple Intelligence, the app shows a designed availability screen
+      instead of inventing a broken experience.
+    </p>
+
+    <h2>How to get help</h2>
+    <p>
+      Open a GitHub issue (preferred for 1.0):
+      <a href="https://github.com/markkaminsky/internetsearch/issues">github.com/markkaminsky/internetsearch/issues</a>
+    </p>
+    <p>
+      Include: device model, iOS version, whether Apple Intelligence is on,
+      and what you searched. Do not paste API keys.
+    </p>
+
+    <h2>Common questions</h2>
+    <ul>
+      <li><strong>Results won’t author / “unavailable” messages.</strong> Turn on Apple Intelligence, confirm the device is supported, and try again on Wi‑Fi after a reboot.</li>
+      <li><strong>No live images / Verify live does nothing useful.</strong> That path needs a search-provider API key in Settings. Without a key, results still author on-device; live verification and live imagery stay off by design.</li>
+      <li><strong>Go deeper / “Grounded live”.</strong> Tap Go deeper on a results page. Settled topics can ground on Wikipedia with no key. Product/news-style queries use your configured provider when a key is saved.</li>
+      <li><strong>Airplane mode.</strong> Authored results still work offline. Live verification and live grounding need a network.</li>
+      <li><strong>Crisis resources.</strong> Queries that look like personal crisis intent show help resources (including 988 in the US) instead of a normal results page.</li>
+    </ul>
+
+    <h2>Privacy</h2>
+    <p>
+      We collect nothing. Full policy:
+      <a href="privacy.html">Privacy Policy</a>.
+    </p>
+
+    <h2>App Review note</h2>
+    <p>
+      Full experience requires Apple Intelligence. Demo without an account:
+      search <code>history of the Suez canal</code>, tap Go deeper — the app
+      reads a live Wikipedia page and shows a “Grounded live” badge.
+    </p>
+
+    <hr />
+    <p class="meta">This page is the App Store Connect support URL target.</p>
+  </main>
+</body>
+</html>

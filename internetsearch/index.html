@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InternetSearch</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #111;
+      --muted: #555;
+      --bg: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #f2f2f2;
+        --muted: #a8a8a8;
+        --bg: #111;
+      }
+    }
+    body {
+      margin: 0;
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 36rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.85rem; margin: 0 0 0.4rem; }
+    .tag { color: var(--muted); margin-bottom: 1.75rem; }
+    a { color: inherit; }
+    ul { padding-left: 1.2rem; line-height: 1.9; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>InternetSearch</h1>
+    <p class="tag">The AI is the index — search results authored on your iPhone.</p>
+    <ul>
+      <li><a href="support.html">Support</a> — App Store support URL</li>
+      <li><a href="privacy.html">Privacy Policy</a> — App Store privacy policy URL</li>
+      <li><a href="https://github.com/markkaminsky/internetsearch">Source on GitHub</a></li>
+    </ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — InternetSearch</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #111;
+      --muted: #555;
+      --rule: #ddd;
+      --bg: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #f2f2f2;
+        --muted: #a8a8a8;
+        --rule: #333;
+        --bg: #111;
+      }
+    }
+    body {
+      margin: 0;
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
+    p, li { color: var(--fg); }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    ul { padding-left: 1.2rem; }
+    a { color: inherit; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    nav a { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <h1>Privacy Policy</h1>
+    <p class="meta">InternetSearch · Effective July 14, 2026 · Matches the App Store nutrition label and <code>PrivacyInfo.xcprivacy</code></p>
+
+    <p>
+      InternetSearch is built so your searches stay yours. Results are authored
+      on your iPhone by Apple Intelligence. We do not operate a search backend
+      that receives your queries by default.
+    </p>
+
+    <h2>Data Not Collected</h2>
+    <p>
+      We do not collect personal data. There is no account, no analytics SDK,
+      no advertising identifier, and no tracking. The App Privacy nutrition
+      label is <strong>Data Not Collected</strong>.
+    </p>
+    <ul>
+      <li><strong>Tracking:</strong> none (<code>NSPrivacyTracking</code> is false; no tracking domains).</li>
+      <li><strong>Collected data types:</strong> none (<code>NSPrivacyCollectedDataTypes</code> is empty).</li>
+    </ul>
+
+    <h2>What stays on your device</h2>
+    <ul>
+      <li><strong>Search results</strong> are generated on-device by the Foundation Models framework (Apple Intelligence).</li>
+      <li><strong>Search history / personal annotations</strong> stay on this device (Core Spotlight / local storage). They are not uploaded to us.</li>
+      <li><strong>Photos</strong> you search with are processed on-device with the Vision framework. The photo itself never leaves the device. If you have saved a provider key, only the short on-device description of what the photo shows may be sent for imagery and live rows (see &ldquo;Live verification / images&rdquo; below) — never the pixels.</li>
+      <li><strong>App preferences</strong> use UserDefaults on-device for app functionality (Apple Required Reason API <code>CA92.1</code>).</li>
+      <li><strong>Optional API keys</strong> you paste for live-web verification are stored in the iOS Keychain on your device, not on our servers.</li>
+    </ul>
+
+    <h2>Optional network use (you choose)</h2>
+    <p>With no key saved, searching is fully on-device; the only network calls are features you tap. If you save a search-provider key, one automatic enrichment also runs, described first below:</p>
+    <ul>
+      <li><strong>Live verification / images (needs your key)</strong> — if you save a search-provider key in Settings, each results page may <em>automatically</em> send your search text to that provider (for example Tavily or Brave) to fetch result imagery — and, on time-sensitive or low-confidence pages, a few live result rows. What is sent is the search text, the page&rsquo;s short image concept, or — for photo searches — the on-device description of the photo (e.g. &ldquo;golden retriever, park&rdquo;), never the photo itself. Tapping &ldquo;Verify&rdquo; on a card additionally sends that card&rsquo;s headline. Remove the key and none of this runs.</li>
+      <li><strong>Go deeper (grounded answers)</strong> — when you tap Go deeper, the app may read one real page. Settled topics can use Wikipedia’s public API (no key). Other topics may use one search from your configured provider. Only the query (and, when verifying, card headlines) leave the device.</li>
+      <li><strong>Check the latest / headlines</strong> — on time-sensitive or product pages you can tap to load current headlines. That one tap sends only your search text to Google&rsquo;s public news feed (no key, no account); headlines and their links are shown clearly as live web content.</li>
+      <li><strong>Opening the web</strong> — source links, headline links, the &ldquo;Grounded live&rdquo; badge, and &ldquo;Watch videos&rdquo; open real websites (for example a publisher, or YouTube&rsquo;s search page) in an in-app Safari view. That is ordinary web browsing, subject to those sites&rsquo; own policies.</li>
+    </ul>
+    <p>
+      We do not receive those requests. They go from your device to the provider
+      or site you invoked. Their privacy policies apply to what they process.
+    </p>
+
+    <h2>What we never do</h2>
+    <ul>
+      <li>No ads</li>
+      <li>No selling of data</li>
+      <li>No building a cross-user profile of your searches</li>
+      <li>No third-party cloud LLM as the search engine</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>
+      The app is a general-purpose generative search tool. It is not directed at
+      children under 13. Use parental judgment for younger users.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      If this policy changes in a meaningful way, we will update this page and
+      the effective date above.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Privacy questions: open an issue on
+      <a href="https://github.com/markkaminsky/internetsearch/issues">GitHub Issues</a>
+      or use the contact path on the <a href="support.html">Support</a> page.
+    </p>
+
+    <hr />
+    <p class="meta">This page is the App Store Connect privacy policy URL target.</p>
+  </main>
+</body>
+</html>
