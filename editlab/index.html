@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EditLab</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #111;
+      --muted: #555;
+      --rule: #ddd;
+      --bg: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #f2f2f2;
+        --muted: #a8a8a8;
+        --rule: #333;
+        --bg: #111;
+      }
+    }
+    body {
+      margin: 0;
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.9rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    ul { padding-left: 1.2rem; }
+    a { color: inherit; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    nav a { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>EditLab</h1>
+    <p class="meta">The editor that takes prompts. A macOS video editor that runs on your Mac.</p>
+
+    <p>
+      Tell EditLab what you&rsquo;re making and it lays out the shots, casts the
+      character, and stamps the transitions — as ordinary clips and keyframes
+      you can retime, restyle or delete by hand. It also repairs generated
+      footage instead of re-rolling it: erase, blur or patch a region, and hold
+      a face steady across a shot, baked into the export.
+    </p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li>Prompt-seeded projects, storyboard placeholders, format arcs</li>
+      <li>Region repair and face continuity that ship in the export</li>
+      <li>Character animation: gaits, fights, props, stop-motion or smooth</li>
+      <li>Narration in your Mac&rsquo;s voices, and voice control of the edit</li>
+      <li>Grand transitions, camera lanes, scene and effect cards, a sound kit</li>
+      <li>No account, no subscription, no data collected</li>
+    </ul>
+
+    <h2>Links</h2>
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+
+    <hr />
+    <p class="meta">&copy; 2026 Mark Kaminsky</p>
+  </main>
+</body>
+</html>
