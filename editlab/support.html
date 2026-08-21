@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — EditLab</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #111;
+      --muted: #555;
+      --rule: #ddd;
+      --bg: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #f2f2f2;
+        --muted: #a8a8a8;
+        --rule: #333;
+        --bg: #111;
+      }
+    }
+    body {
+      margin: 0;
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    ul { padding-left: 1.2rem; }
+    a { color: inherit; }
+    code { font-size: 0.92em; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    nav a { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <h1>Support</h1>
+    <p class="meta">EditLab — help for people using the app and for App Review</p>
+
+    <h2>What EditLab needs</h2>
+    <ul>
+      <li>A Mac running macOS 14 or later</li>
+      <li>Nothing else — no account, no sign-in, no subscription</li>
+    </ul>
+    <p>
+      Editing, repair, character animation, narration and export all run on
+      your Mac. The only outbound request EditLab makes on its own behalf is
+      the optional Director pass, and only if you have entered your own API
+      key and clicked it.
+    </p>
+
+    <h2>How to get help</h2>
+    <p>
+      Email <a href="mailto:markkaminsky99@gmail.com">markkaminsky99@gmail.com</a>.
+    </p>
+    <p>
+      Include: your macOS version, the EditLab version (menu EditLab &rarr;
+      About), what you were doing, and whether the clip was camera footage or
+      generated video. Please do not paste API keys.
+    </p>
+    <p>
+      In the app, press <code>&#8984;?</code> for the built-in Help.
+    </p>
+
+    <h2>Common questions</h2>
+    <ul>
+      <li><strong>A project opens with missing media.</strong> Projects point at your source files where they live. If you moved, renamed, or deleted a file after saving, put it back or import it again.</li>
+      <li><strong>Repairs don&rsquo;t look applied.</strong> Region erase, blur, patch and the face-continuity pass are baked in at export — check the exported file, not only the preview scrub.</li>
+      <li><strong>Narration sounds robotic, or a voice is missing.</strong> EditLab speaks with your Mac&rsquo;s installed voices. Add better ones in System Settings &rarr; Accessibility &rarr; Spoken Content &rarr; System Voice &rarr; Manage Voices, then reopen the voice picker.</li>
+      <li><strong>Voice control does nothing.</strong> It needs Microphone and Speech Recognition permission (System Settings &rarr; Privacy &amp; Security). Recognition runs on-device when your Mac supports it.</li>
+      <li><strong>Director pass asks for a key.</strong> That feature is optional and off until you paste your own Claude API key. Your brief and clip timings are sent; your media never is.</li>
+      <li><strong>Import warns about frame rate, silent audio, or color.</strong> That is import conforming telling you what it found in a generated clip — the clip still imports.</li>
+      <li><strong>Export fails or the file is empty.</strong> Check free disk space and that the source media is still available, then export again to a folder you own (not a read-only volume).</li>
+    </ul>
+
+    <h2>Privacy</h2>
+    <p>
+      Nothing is collected. Full policy: <a href="privacy.html">Privacy Policy</a>.
+    </p>
+
+    <h2>App Review note</h2>
+    <p>
+      Sandboxed, no accounts, no network required to use the app. Microphone
+      and speech recognition are used for voice control and narration
+      recording. The Director pass field is user-configured and empty by
+      default.
+    </p>
+
+    <hr />
+    <p class="meta">This page is the App Store Connect support URL target.</p>
+  </main>
+</body>
+</html>
