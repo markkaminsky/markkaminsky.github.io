@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — EditLab Tracker</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #111;
+      --muted: #555;
+      --rule: #ddd;
+      --bg: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #f2f2f2;
+        --muted: #a8a8a8;
+        --rule: #333;
+        --bg: #111;
+      }
+    }
+    body {
+      margin: 0;
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    ul { padding-left: 1.2rem; }
+    a { color: inherit; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    nav a { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <h1>Privacy Policy</h1>
+    <p class="meta">EditLab Tracker · last updated 8 September 2026</p>
+    <h2>The short version</h2>
+    <p>
+      EditLab Tracker does not collect any data. Nothing you do in the app is
+      sent anywhere. There are no analytics, no telemetry, no accounts, no
+      advertising and no third-party SDKs of any kind.
+    </p>
+    <h2>What the app stores, and where</h2>
+    <p>Everything the app keeps stays on your own device:</p>
+    <ul>
+      <li><strong>Songs</strong> you save are written to files you choose, in the location you choose, using the standard macOS save panel. They are <code>.eltrk</code> files, which are plain JSON.</li>
+      <li><strong>Audio you import</strong> — records, samples — is read from files you choose, and is stored inside your song file. It is never uploaded.</li>
+      <li><strong>Preferences and recovery data</strong> are kept in the app&rsquo;s own sandboxed storage on your device, so that unsaved work can be offered back to you after an unexpected quit.</li>
+    </ul>
+    <p>None of this leaves your device, and none of it is visible to the developer.</p>
+    <h2>Network access</h2>
+    <p>
+      The app makes no network requests. Its interface is loaded from files
+      inside the application bundle, and a Content-Security-Policy restricts it
+      to the bundle&rsquo;s own origin. There is no server component to this app.
+    </p>
+    <h2>Artificial intelligence features</h2>
+    <p>
+      The app&rsquo;s assistant runs entirely on your device using Apple&rsquo;s
+      FoundationModels framework. What you type into it is processed locally and
+      is not transmitted to the developer, to Apple, or to any other party.
+    </p>
+    <h2>Effect Designs</h2>
+    <p>
+      You can load an Effect Design — an <code>.eltrkfx</code> file — to add an
+      effect. These are JSON documents describing how audio nodes are wired.
+      They are read from files you choose on your own device, and the app makes
+      no network request to fetch or run one.
+    </p>
+    <h2>Children</h2>
+    <p>
+      The app is a music tool and does not collect data from anyone, including
+      children.
+    </p>
+    <h2>Changes</h2>
+    <p>
+      If this policy ever changes, the updated version will be posted at this
+      address, with a new date at the top.
+    </p>
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy: <a href="mailto:markkaminsky99@gmail.com">markkaminsky99@gmail.com</a>
+    </p>
+    <hr />
+    <p class="meta">This page is the App Store Connect privacy policy URL target.</p>
+  </main>
+</body>
+</html>
