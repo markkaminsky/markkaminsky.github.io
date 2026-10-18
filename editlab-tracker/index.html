@@ -3,26 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EditLab Tracker</title>
+  <title>EditLab Tracker: fix your AI song on the Mac</title>
+  <meta name="description" content="Fix your AI song, part by part. EditLab Tracker splits a finished song into a playable project on your Mac. Free to download; Pro is a one-time $24.99 USD." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://markkaminsky.github.io/editlab-tracker/" />
+  <meta property="og:site_name" content="EditLab" />
+  <meta property="og:title" content="EditLab Tracker: fix your AI song, part by part" />
+  <meta property="og:description" content="Drop in a finished song and it comes back as a playable project. Free on the Mac App Store; Pro is a one-time $24.99 USD." />
+  <meta property="og:image" content="https://markkaminsky.github.io/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("/assets/fonts/bricolage-grotesque-latin-opsz.woff2") format("woff2");
+      font-weight: 200 800;
+      font-display: swap;
+    }
     :root {
       color-scheme: light dark;
-      --fg: #111;
-      --muted: #555;
-      --rule: #ddd;
-      --bg: #fafafa;
+      --fg: #1e332d;
+      --muted: #536861;
+      --rule: #cdd6d1;
+      --bg: #f3f5f2;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --fg: #f2f2f2;
-        --muted: #a8a8a8;
-        --rule: #333;
-        --bg: #111;
+        --fg: #e4ece8;
+        --muted: #9fb2aa;
+        --rule: #2a3b35;
+        --bg: #0f1c18;
       }
     }
     body {
       margin: 0;
-      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font: 17px/1.55 "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-optical-sizing: auto;
       color: var(--fg);
       background: var(--bg);
     }
@@ -43,23 +59,29 @@
 <body>
   <main>
     <nav>
-      <a href="../">MSK Software</a>
+      <a href="../">EditLab</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
     </nav>
     <h1>EditLab Tracker</h1>
-    <p class="meta">A fully featured music tracker for the Mac, with a song splitter.</p>
+    <p class="meta">Fix your AI song, part by part. A full music tracker for the Mac, with a song splitter.</p>
     <p>
-      EditLab Tracker uses a vertical tracker interface to sequence samples and
-      notes: the song runs down the screen one row at a time, and you play notes
-      straight from your keyboard. Built-in synth sounds, your own audio, a mixer
-      with real meters, effect racks and automation are all in one window.
+      Drop a finished song onto the window, an AI track or your own, and it
+      comes back as a kit of its own sounds: kick, snare, hat, bass and the rest,
+      named where the app can tell them apart, laid out as a playable project.
+      Replace the bar that went wrong, tame the hiss on just the part that has
+      it, and keep everything else. Or rearrange the sounds and build something
+      new from them.
     </p>
     <p>
-      It also has a song splitter. Drop a finished song onto the window and it
-      comes back as a kit of its own sounds: kick, snare, hat, bass and the rest,
-      named where the app can tell them apart. Play them, rearrange them, and
-      remix the song or build something new from it.
+      Underneath is a vertical tracker for sequencing samples and notes: the
+      song runs down the screen one row at a time, and you play notes straight
+      from your keyboard. Built-in synth sounds, your own audio, a mixer with
+      real meters, effect racks and automation are all in one window.
+    </p>
+    <p>
+      <a href="https://apps.apple.com/app/id6807879768">Get EditLab Tracker on the Mac App Store</a>.
+      It's free to download, and Pro is a one-time $24.99 USD.
     </p>
     <h2>What it does</h2>
     <ul>
@@ -69,11 +91,22 @@
       <li>Effect racks on every channel and the master, with seventeen built-in effects, plus effect designs from <code>.eltrkfx</code> files</li>
       <li>Automation of volume, pan, effect parameters and tempo</li>
       <li>A song splitter that turns a finished MP3, WAV or M4A into a playable kit</li>
-      <li>Export as WAV or M4A; songs saved as <code>.eltrk</code> files</li>
+      <li>Export as WAV or M4A with Pro; songs saved as <code>.eltrk</code> files</li>
       <li>No account, no subscription, no data collected</li>
     </ul>
+    <h2>Free and Pro</h2>
+    <ul>
+      <li><strong>Free:</strong> write, edit, play and save songs, all the demo songs, and three splits of your own songs</li>
+      <li><strong>Pro, a one-time $24.99 USD:</strong> unlimited splitting, WAV and M4A export, sample export, and saving splits as sample packs</li>
+    </ul>
+    <h2>Requirements</h2>
+    <p>
+      A Mac with macOS 14 or later. Everything runs on your Mac: no account,
+      no network requests, and nothing uploaded.
+    </p>
     <h2>Links</h2>
     <ul>
+      <li><a href="https://apps.apple.com/app/id6807879768">EditLab Tracker on the Mac App Store</a></li>
       <li><a href="support.html">Support</a></li>
       <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
