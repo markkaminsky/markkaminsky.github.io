@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EditLab Tracker: fix your AI song on the Mac</title>
-  <meta name="description" content="Fix your AI song, part by part. EditLab Tracker splits a finished song into a playable project on your Mac. Free to download; Pro is a one-time $24.99 USD." />
+  <meta name="description" content="Fix the one part of your AI song that went wrong, and keep the rest. EditLab Tracker turns a finished song into an editable project that plays back like the original, in stereo. Free on the Mac App Store; Pro is a one-time $24.99 USD." />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://markkaminsky.github.io/editlab-tracker/" />
+  <meta property="og:url" content="https://editlab.app/editlab-tracker/" />
   <meta property="og:site_name" content="EditLab" />
   <meta property="og:title" content="EditLab Tracker: fix your AI song, part by part" />
-  <meta property="og:description" content="Drop in a finished song and it comes back as a playable project. Free on the Mac App Store; Pro is a one-time $24.99 USD." />
-  <meta property="og:image" content="https://markkaminsky.github.io/assets/og.png" />
+  <meta property="og:description" content="Drop in a finished song and it comes back as a project that plays like the original. Fix the bar that went wrong and keep the rest. Free on the Mac App Store." />
+  <meta property="og:image" content="https://editlab.app/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
     @font-face {
@@ -26,6 +26,8 @@
       --muted: #536861;
       --rule: #cdd6d1;
       --bg: #f3f5f2;
+      --card: #e8ede9;
+      --accent: #2c6e57;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -33,6 +35,8 @@
         --muted: #9fb2aa;
         --rule: #2a3b35;
         --bg: #0f1c18;
+        --card: #16261f;
+        --accent: #7cc7a6;
       }
     }
     body {
@@ -48,12 +52,63 @@
       padding: 2.5rem 1.25rem 4rem;
     }
     h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
-    h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
+    h2 { font-size: 1.1rem; margin: 2.25rem 0 0.5rem; }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
-    ul { padding-left: 1.2rem; }
+    .lead { font-size: 1.2rem; line-height: 1.45; margin: 0 0 1rem; }
+    ul, ol { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
     a { color: inherit; }
     hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
     nav a { margin-right: 1rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1rem;
+      border-radius: 0.6rem;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .note { color: var(--muted); font-size: 0.95rem; }
+    /* Screenshots run wider than the text column, up to the window's edge. */
+    figure {
+      margin: 1.75rem 0;
+      width: min(calc(100vw - 2.5rem), 60rem);
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.6rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    }
+    figcaption {
+      max-width: 40rem;
+      margin: 0.7rem auto 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 0.8rem 1rem 0.8rem 3rem;
+      margin: 0.6rem 0;
+      background: var(--card);
+      border-radius: 0.6rem;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 1rem;
+      top: 0.8rem;
+      font-weight: 750;
+      color: var(--accent);
+    }
+    code { font-size: 0.9em; }
   </style>
 </head>
 <body>
@@ -64,46 +119,82 @@
       <a href="privacy.html">Privacy</a>
     </nav>
     <h1>EditLab Tracker</h1>
-    <p class="meta">Fix your AI song, part by part. A full music tracker for the Mac, with a song splitter.</p>
+    <p class="meta">For the Mac. Updated for version 1.4.</p>
+    <p class="lead">Fix the one part of your AI song that went wrong. Keep the rest.</p>
     <p>
       Drop a finished song onto the window, an AI track or your own, and it
-      comes back as a kit of its own sounds: kick, snare, hat, bass and the rest,
-      named where the app can tell them apart, laid out as a playable project.
-      Replace the bar that went wrong, tame the hiss on just the part that has
-      it, and keep everything else. Or rearrange the sounds and build something
-      new from them.
+      comes back as a project you can edit: the drums as notes on a grid, the
+      rest of the music as one-bar loops of the record, and the song's bass and
+      other sounds in the instrument list to build with. Until you change
+      something, it plays back sounding like the original, in stereo. So you
+      fix the bar that went wrong, and everything else stays exactly as it was.
     </p>
     <p>
-      Underneath is a vertical tracker for sequencing samples and notes: the
-      song runs down the screen one row at a time, and you play notes straight
-      from your keyboard. Built-in synth sounds, your own audio, a mixer with
-      real meters, effect racks and automation are all in one window.
+      <a class="btn" href="https://apps.apple.com/app/id6807879768">Get it on the Mac App Store</a>
+    </p>
+    <p class="note">Free to download. Pro is a one-time $24.99 USD, with no subscription.</p>
+
+    <figure>
+      <img src="split.jpg" width="1396" height="682" alt="The Split Audio into a New Song window: a picture of the song's sound, drums in orange and music in blue, and the result: 88 loops of 1 bar, 27 drum sounds as notes, the song's bass and 11 other sounds, at 183.3 BPM, covering 100% of the record." />
+      <figcaption>Splitting a two-minute AI song: 88 one-bar loops, the drums as notes played by 27 of the song's own drum sounds, its bass, and 11 more sounds. On a Mac it took under three seconds.</figcaption>
+    </figure>
+
+    <h2>How a repair works</h2>
+    <ol class="steps">
+      <li><strong>Split the song.</strong> Choose File ▸ Split a Song…, or drop an MP3, WAV or M4A onto the window. Tracker finds the tempo and the bars, and you can change the BPM or how many bars make a loop before you add it.</li>
+      <li><strong>Find what went wrong.</strong> Play it. The side view shows every part as a lane, the loops as waveforms and the drum hits on their own lanes, so you can see where the problem is.</li>
+      <li><strong>Fix just that part.</strong> Swap a broken bar for a clean pass of the same part from elsewhere in the song. Open that bar's loop in the sample editor to smooth the hiss, cut a glitch or fade it. Or change the drum notes. Every edit shows in both the side view and the tracker grid.</li>
+      <li><strong>Export.</strong> Save it as WAV or M4A with Pro. Every export checks itself for clicks, clipping, a cut-off ending and dropouts, and if it finds one, tells you where in the song to listen.</li>
+    </ol>
+
+    <figure>
+      <img src="project.jpg" width="1600" height="683" alt="The side view of a split song: a lane of loop waveforms, a lane of drum hits named by sound, and the tracker grid with the same notes below." />
+      <figcaption>The split song. The side view shows the music as a loop of the record and the drums as hits, and the grid below holds the same notes.</figcaption>
+    </figure>
+
+    <h2>How it compares</h2>
+    <p>
+      Audacity edits the finished waveform, and BandLab's splitter gives you
+      stems. Tracker turns the song into a playable project instead: drum hits
+      on a grid, and the music as loops and sounds on their own tracks. So you
+      can treat or replace just the part carrying the hiss, or swap a broken
+      section for a clean pass of the same part.
     </p>
     <p>
-      <a href="https://apps.apple.com/app/id6807879768">Get EditLab Tracker on the Mac App Store</a>.
-      It's free to download, and Pro is a one-time $24.99 USD.
+      What it doesn't do: pull out a clean vocal stem the way BandLab does.
+      Vocals stay inside the music loops.
     </p>
-    <h2>What it does</h2>
+
+    <h2>Also a full music tracker</h2>
     <ul>
-      <li>Pattern grid with note, instrument, volume, pan and effect columns; patterns arranged in an order list</li>
-      <li>Sample and synth instruments, your own audio in any slot, a sample editor with cut, copy, paste and loop points</li>
+      <li>A pattern grid with note, instrument, volume, pan and effect columns, arranged in an order list, and a side view that shows the same pattern as lanes or as a piano roll; edit in either</li>
+      <li>Sample and synth instruments, your own audio in any slot, and a sample editor with cut, copy, paste, fades, smoothing and loop points</li>
       <li>A mixer with a fader, pan, mute, solo and a live meter per channel, and a master bus</li>
       <li>Effect racks on every channel and the master, with seventeen built-in effects, plus effect designs from <code>.eltrkfx</code> files</li>
       <li>Automation of volume, pan, effect parameters and tempo</li>
-      <li>A song splitter that turns a finished MP3, WAV or M4A into a playable kit</li>
-      <li>Export as WAV or M4A with Pro; songs saved as <code>.eltrk</code> files</li>
-      <li>No account, no subscription, no data collected</li>
+      <li>Songs saved as <code>.eltrk</code> files</li>
     </ul>
+
     <h2>Free and Pro</h2>
     <ul>
       <li><strong>Free:</strong> write, edit, play and save songs, all the demo songs, and three splits of your own songs</li>
       <li><strong>Pro, a one-time $24.99 USD:</strong> unlimited splitting, WAV and M4A export, sample export, and saving splits as sample packs</li>
     </ul>
-    <h2>Requirements</h2>
+
+    <h2>Requirements, formats and privacy</h2>
+    <ul>
+      <li>A Mac with macOS 14 or later</li>
+      <li>Imports MP3, WAV and M4A; exports WAV, and M4A at 256 kb/s</li>
+      <li>Everything runs on your Mac: no account, no network requests, nothing uploaded, no data collected</li>
+    </ul>
+
+    <h2>For reviewers and creators</h2>
     <p>
-      A Mac with macOS 14 or later. Everything runs on your Mac: no account,
-      no network requests, and nothing uploaded.
+      Writing about AI music or teaching people to fix their songs? Email
+      <a href="mailto:markkaminsky99@gmail.com?subject=EditLab%20Tracker%20review%20code">markkaminsky99@gmail.com</a>
+      for a Pro code.
     </p>
+
     <h2>Links</h2>
     <ul>
       <li><a href="https://apps.apple.com/app/id6807879768">EditLab Tracker on the Mac App Store</a></li>
