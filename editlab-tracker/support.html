@@ -59,11 +59,12 @@
     <h2>What EditLab Tracker needs</h2>
     <ul>
       <li>A Mac running macOS 14 or later, with a display of 1280 by 800 or larger</li>
+      <li>For the vocal on its own track: an Apple silicon Mac with macOS 15 or later</li>
       <li>Nothing else — no account, no sign-in, no subscription</li>
     </ul>
     <p>
-      Composing, splitting, mixing and export all run on your Mac. The app makes
-      no network requests.
+      Composing, splitting, mixing and export all run on your Mac, the vocal
+      model too. The app makes no network requests.
     </p>
     <h2>How to get help</h2>
     <p>
@@ -77,6 +78,8 @@
     <h2>Common questions</h2>
     <ul>
       <li><strong>I dropped an audio file and got one instrument, not a kit.</strong> Files shorter than about twenty seconds load as a single sample. A full-length track goes to the splitter. To split a shorter file anyway, use Sample &rarr; Split a Track.</li>
+      <li><strong>My split has no VOCAL track.</strong> The vocal gets its own track on an Apple silicon Mac with macOS 15 or later, with <em>Give the vocal its own track</em> ticked in the split window. If the song has no singing, the split says so and there is no VOCAL track. On other Macs the vocal stays inside the music loops.</li>
+      <li><strong>A split with the vocal takes longer.</strong> A trained model listens to the whole song first: about half a minute for a three-and-a-half-minute song on a recent Apple silicon Mac. The split window shows the time left.</li>
       <li><strong>Some split sounds are named low, mid or high.</strong> The splitter names a sound by its role when it can tell; when it cannot, it names the sound by where it sits. Rename any sound in the instrument list.</li>
       <li><strong>Export WAV takes a while.</strong> The song is rendered offline and the status bar shows the percentage as it goes. A long song with many effects can take about as long as the song itself. Export M4A is written in real time and produces a file about a tenth of the size.</li>
       <li><strong>The interface is small on a large display.</strong> Window &rarr; Text Size scales the whole app in steps up to 150%. &#8984;+ and &#8984;&minus; step it from the keyboard, &#8984;0 returns to normal.</li>

@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EditLab Tracker: fix your AI song on the Mac</title>
-  <meta name="description" content="Fix the one part of your AI song that went wrong, and keep the rest. EditLab Tracker turns a finished song into an editable project that plays back like the original, in stereo. Free on the Mac App Store; Pro is a one-time $24.99 USD." />
+  <meta name="description" content="Fix the one part of your AI song that went wrong, and keep the rest. EditLab Tracker turns a finished song into an editable project that plays back like the original, in stereo, with the vocal on its own track. Free on the Mac App Store; Pro is a one-time $24.99 USD." />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://editlab.app/editlab-tracker/" />
   <meta property="og:site_name" content="EditLab" />
   <meta property="og:title" content="EditLab Tracker: fix your AI song, part by part" />
-  <meta property="og:description" content="Drop in a finished song and it comes back as a project that plays like the original. Fix the bar that went wrong and keep the rest. Free on the Mac App Store." />
+  <meta property="og:description" content="Drop in a finished song and it comes back as a project that plays like the original, with the vocal on its own track. Fix the bar that went wrong and keep the rest. Free on the Mac App Store." />
   <meta property="og:image" content="https://editlab.app/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
@@ -119,13 +119,14 @@
       <a href="privacy.html">Privacy</a>
     </nav>
     <h1>EditLab Tracker</h1>
-    <p class="meta">For the Mac. Updated for version 1.4.</p>
+    <p class="meta">For the Mac. Updated for version 1.5.</p>
     <p class="lead">Fix the one part of your AI song that went wrong. Keep the rest.</p>
     <p>
       Drop a finished song onto the window, an AI track or your own, and it
-      comes back as a project you can edit: the drums as notes on a grid, the
-      rest of the music as one-bar loops of the record, and the song's bass and
-      other sounds in the instrument list to build with. Until you change
+      comes back as a project you can edit: the singing on its own VOCAL track,
+      the drums as notes on a grid, the rest of the music as loops of the
+      record, and the song's bass and other sounds in the instrument list to
+      build with. Until you change
       something, it plays back sounding like the original, in stereo. So you
       fix the bar that went wrong, and everything else stays exactly as it was.
     </p>
@@ -141,9 +142,9 @@
 
     <h2>How a repair works</h2>
     <ol class="steps">
-      <li><strong>Split the song.</strong> Choose File ▸ Split a Song…, or drop an MP3, WAV or M4A onto the window. Tracker finds the tempo and the bars, and you can change the BPM or how many bars make a loop before you add it.</li>
+      <li><strong>Split the song.</strong> Choose File ▸ Split a Song…, or drop an MP3, WAV or M4A onto the window. Tracker finds the tempo and the bars, and you can change the BPM or how many bars make a loop before you add it. Leave <em>Give the vocal its own track</em> on and the singing comes out onto a VOCAL track. A trained model listens to the whole song first, so this takes about half a minute for a three-and-a-half-minute song, and the window shows the time left.</li>
       <li><strong>Find what went wrong.</strong> Play it. The side view shows every part as a lane, the loops as waveforms and the drum hits on their own lanes, so you can see where the problem is.</li>
-      <li><strong>Fix just that part.</strong> Swap a broken bar for a clean pass of the same part from elsewhere in the song. Open that bar's loop in the sample editor to smooth the hiss, cut a glitch or fade it. Or change the drum notes. Every edit shows in both the side view and the tracker grid.</li>
+      <li><strong>Fix just that part.</strong> Swap a broken bar for a clean pass of the same part from elsewhere in the song. Turn the vocal down, mute it, or fix one line of it on its own. Open a bar's loop in the sample editor to smooth the hiss, cut a glitch or fade it. Or change the drum notes. Every edit shows in both the side view and the tracker grid.</li>
       <li><strong>Export.</strong> Save it as WAV or M4A with Pro. Every export checks itself for clicks, clipping, a cut-off ending and dropouts, and if it finds one, tells you where in the song to listen.</li>
     </ol>
 
@@ -155,14 +156,16 @@
     <h2>How it compares</h2>
     <p>
       Audacity edits the finished waveform, and BandLab's splitter gives you
-      stems. Tracker turns the song into a playable project instead: drum hits
-      on a grid, and the music as loops and sounds on their own tracks. So you
+      stems. Tracker turns the song into a playable project instead: the vocal
+      on its own track, drum hits on a grid, and the music as loops and sounds on their own tracks. So you
       can treat or replace just the part carrying the hiss, or swap a broken
       section for a clean pass of the same part.
     </p>
     <p>
-      What it doesn't do: pull out a clean vocal stem the way BandLab does.
-      Vocals stay inside the music loops.
+      What it doesn't do: scrub hiss or shimmer out of a whole song in one
+      click. It lets you fix exactly the part that has it, and leaves the rest
+      as it was. The vocal on its own track needs an Apple silicon Mac with
+      macOS 15 or later; on other Macs the vocal stays inside the music loops.
     </p>
 
     <h2>Also a full music tracker</h2>
@@ -183,9 +186,9 @@
 
     <h2>Requirements, formats and privacy</h2>
     <ul>
-      <li>A Mac with macOS 14 or later</li>
+      <li>A Mac with macOS 14 or later; the vocal on its own track needs an Apple silicon Mac with macOS 15 or later</li>
       <li>Imports MP3, WAV and M4A; exports WAV, and M4A at 256 kb/s</li>
-      <li>Everything runs on your Mac: no account, no network requests, nothing uploaded, no data collected</li>
+      <li>Everything runs on your Mac, the vocal model too: no account, no network requests, nothing uploaded, no data collected</li>
     </ul>
 
     <h2>For reviewers and creators</h2>
