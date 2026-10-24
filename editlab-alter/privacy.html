@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — EditLab Alter</title>
+  <meta name="description" content="EditLab Alter's privacy policy: your clips are opened, checked and fixed on your Mac and never leave it." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("/assets/fonts/bricolage-grotesque-latin-opsz.woff2") format("woff2");
+      font-weight: 200 800;
+      font-display: swap;
+    }
+    :root {
+      color-scheme: light dark;
+      --fg: #1e332d;
+      --muted: #536861;
+      --rule: #cdd6d1;
+      --bg: #f3f5f2;
+      --card: #e8ede9;
+      --accent: #2c6e57;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e4ece8;
+        --muted: #9fb2aa;
+        --rule: #2a3b35;
+        --bg: #0f1c18;
+        --card: #16261f;
+        --accent: #7cc7a6;
+      }
+    }
+    body {
+      margin: 0;
+      font: 17px/1.55 "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-optical-sizing: auto;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.1rem; margin: 2.25rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .lead { font-size: 1.2rem; line-height: 1.45; margin: 0 0 1rem; }
+    ul, ol { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    a { color: inherit; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    nav a { margin-right: 1rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1rem;
+      border-radius: 0.6rem;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .note { color: var(--muted); font-size: 0.95rem; }
+    /* Screenshots run wider than the text column, up to the window's edge. */
+    figure {
+      margin: 1.75rem 0;
+      width: min(calc(100vw - 2.5rem), 60rem);
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.6rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    }
+    figcaption {
+      max-width: 40rem;
+      margin: 0.7rem auto 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 0.8rem 1rem 0.8rem 3rem;
+      margin: 0.6rem 0;
+      background: var(--card);
+      border-radius: 0.6rem;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 1rem;
+      top: 0.8rem;
+      font-weight: 750;
+      color: var(--accent);
+    }
+    code { font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <h1>Privacy Policy</h1>
+    <p class="meta">EditLab Alter for Mac · last updated 16 October 2026</p>
+
+    <p class="lead">Today, EditLab Alter itself collects nothing about you. Your clips are opened, checked and fixed on your Mac, and they never leave it. Apple handles the subscription and gives us only what it gives every developer, set out below. If Alter ever needs to send us anything — never your clips, but perhaps a little information about how it is used, to stop it being misused — this page will say so first.</p>
+
+    <h2>Your clips stay on your Mac</h2>
+    <p>Alter opens only the files you choose. Everything it does with them — finding faces, words, objects and light that jumps, and every fix — runs on your Mac, with Apple's own on-device tools and three open-source models that come with Alter (LaMa, Depth Anything and Open NSFW, named in the Acknowledgements). Your clips, and the videos you make, are never uploaded. Today Alter sends nothing at all: it has no network access of its own.</p>
+
+    <h2>What Alter keeps, on your Mac only</h2>
+    <ul>
+      <li>Your work on a clip, so you can carry on where you left off.</li>
+      <li>A short list of the clips you opened recently, with a small picture of each.</li>
+      <li>How many of your free exports you have used.</li>
+      <li>Your settings.</li>
+    </ul>
+    <p>They stay in Alter's own storage on your Mac, and nowhere else. A project you save is a file like any other: it holds a copy of the clip and your work on it, and it stays where you save it.</p>
+
+    <h2>Faces</h2>
+    <p>To keep each face the same through a clip, and for the fixes you ask for, Alter finds the faces in the clips you open and measures them on your Mac: where each face is, where its eyes, nose and mouth are, how it is turned and lit, and a feature print — numbers from Apple's Vision that describe how the face looks in that frame. A face in a photo you pick is measured the same way, to fit it. Alter compares the faces in a clip with each other, to tell the people in it apart so a fix stays on the right person. It never tries to find out who anyone is, and never compares a face with faces from anywhere else.</p>
+    <ul>
+      <li><strong>The measurements</strong> are never saved and never leave your Mac. Alter works them out again each time it looks at a clip, and uses them only for your fixes, never for advertising or anything else.</li>
+      <li><strong>Nudity.</strong> Before a face from a photo goes on, Alter looks at the photo and at the frames it goes onto for nudity, on your Mac, and puts no face on where it sees some. What it sees is not kept.</li>
+      <li><strong>What is kept</strong> is what you decide: the names you give people and what you say about them, the frames you mark, and the fixes themselves — a face you swap in is kept as it appears on each frame of the clip. It stays with your work on the clip, in Alter's own folder on your Mac (which your Mac's backups include).</li>
+      <li><strong>A photo</strong> you take a face from is never copied into Alter. Alter keeps its file name and, when it needs to open it again, a link to it.</li>
+      <li><strong>A project</strong> you save holds all of this, the photo's name and link included, and goes wherever you put it or send it.</li>
+      <li><strong>To delete it,</strong> use Start over: it clears a clip's work, its faces included, and the project's too when one is open. Deleting a project deletes everything in it.</li>
+    </ul>
+
+    <h2>What Apple gives us</h2>
+    <ul>
+      <li><strong>The subscription.</strong> It is sold and handled by Apple through the App Store. We never see your name, your Apple Account or your payment details. Apple shows us totals, such as how many subscriptions were sold and in which countries, that do not identify anyone.</li>
+      <li><strong>Crash reports.</strong> If you have chosen, in your Mac's settings, to share analytics with app developers, Apple may pass us reports of Alter crashing and figures on how it is used. They do not identify you, and you can turn this off in System Settings &rarr; Privacy &amp; Security &rarr; Analytics &amp; Improvements.</li>
+    </ul>
+    <p>Apple's privacy policy covers what Apple does: <a href="https://www.apple.com/legal/privacy/" rel="noopener">apple.com/legal/privacy</a>.</p>
+
+    <h2>If you write to us</h2>
+    <p>If you email us, we use your address and what you write only to answer you, and we keep them no longer than that needs.</p>
+
+    <h2>The movies you export</h2>
+    <p>A movie you export says in its file information that it was edited with EditLab Alter, and which version. Unless you subscribe to EditLab Alter Pro, it also shows a small EditLab mark in a bottom corner. Nothing is hidden in the picture, and it never holds anything about you.</p>
+
+    <h2>No tracking</h2>
+    <p>Alter has no ads and no tracking, and it contains no analytics or other third-party code that collects information. This is true for everyone who uses it, children included.</p>
+
+    <h2>If this changes</h2>
+    <p>A future version of Alter may need to send us some information — never your clips, but, for example, details about how Alter is used, such as its version, the kinds of fixes made or how many exports there were — where that is the minimum needed to stop Alter being misused or its subscription being got around. If so, we will say on this page exactly what, why and for how long before the version of Alter that sends it is released, and ask for your permission where the law requires it. Any change to this policy is shown here, with a new date at the top.</p>
+
+    <h2>Using Alter</h2>
+    <p>Your use of Alter is also covered by its <strong>Terms of Use</strong>: Apple's standard licence, and the rules for what Alter may not be used for and when your use of it can be limited or ended.</p>
+
+    <h2>Questions</h2>
+    <p>EditLab (Mark Kaminsky) · <a href="mailto:markkaminsky99@gmail.com">markkaminsky99@gmail.com</a></p>
+    <hr />
+    <p class="meta">&copy; 2026 Mark Kaminsky</p>
+  </main>
+</body>
+</html>

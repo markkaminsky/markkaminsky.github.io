@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EditLab Alter: fix the flaw in your AI video, keep the clip</title>
+  <meta name="description" content="Fix the one thing that ruined your AI clip and keep the rest. EditLab Alter fixes faces that morph, removes what shouldn't be there, puts signs and numbers right and steadies flickering light, all on your Mac. Free on the Mac App Store, with 10 free exports." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://editlab.app/editlab-alter/" />
+  <meta property="og:site_name" content="EditLab" />
+  <meta property="og:title" content="EditLab Alter: fix the flaw, keep the clip" />
+  <meta property="og:description" content="Your AI clip is almost perfect. Alter fixes the one thing that gives it away and keeps the rest of the shot. Free on the Mac App Store." />
+  <meta property="og:image" content="https://editlab.app/editlab-alter/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("/assets/fonts/bricolage-grotesque-latin-opsz.woff2") format("woff2");
+      font-weight: 200 800;
+      font-display: swap;
+    }
+    :root {
+      color-scheme: light dark;
+      --fg: #1e332d;
+      --muted: #536861;
+      --rule: #cdd6d1;
+      --bg: #f3f5f2;
+      --card: #e8ede9;
+      --accent: #2c6e57;
+      --film: #111410;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e4ece8;
+        --muted: #9fb2aa;
+        --rule: #2a3b35;
+        --bg: #0f1c18;
+        --card: #16261f;
+        --accent: #7cc7a6;
+      }
+    }
+    body {
+      margin: 0;
+      font: 17px/1.55 "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-optical-sizing: auto;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.1rem; margin: 2.25rem 0 0.5rem; }
+    h3 { font-size: 1rem; margin: 0.7rem 0 0.15rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .lead { font-size: 1.2rem; line-height: 1.45; margin: 0 0 1rem; }
+    ul, ol { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    a { color: inherit; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    nav a { margin-right: 1rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1rem;
+      border-radius: 0.6rem;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .note { color: var(--muted); font-size: 0.95rem; }
+
+    /* Pictures and films run wider than the text column, up to the window's edge. */
+    .wide {
+      margin: 1.75rem 0;
+      width: min(calc(100vw - 2.5rem), 60rem);
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    figure { margin: 0; }
+    video, .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.6rem;
+      background: var(--film);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    }
+    figcaption {
+      max-width: 40rem;
+      margin: 0.7rem auto 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* The eight films from Alter's own start screen: the flaw, then the fix. */
+    .films {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.75rem 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+    .films li { margin: 0; }
+    .films video { aspect-ratio: 640 / 256; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); }
+    .films p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    /* The App Store screenshots: the first across, then two by two. */
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    .shots .shot:first-child { grid-column: 1 / -1; }
+    .shot a { display: block; }
+
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 0.8rem 1rem 0.8rem 3rem;
+      margin: 0.6rem 0;
+      background: var(--card);
+      border-radius: 0.6rem;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 1rem;
+      top: 0.8rem;
+      font-weight: 750;
+      color: var(--accent);
+    }
+    @media (max-width: 720px) {
+      .films, .shots { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a href="../">EditLab</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <h1>EditLab Alter</h1>
+    <p class="meta">For the Mac. Version 1.0.</p>
+    <p class="lead">Fix the one thing that ruined your AI clip. Keep the rest.</p>
+    <p>
+      An AI clip can be exactly what you wanted, and then one thing gives it
+      away: her face turns into someone else's halfway through, a stranger
+      walks in, or the sign says nonsense. Generating it again costs credits
+      and usually loses the take you liked. Alter fixes that one thing on your
+      Mac and leaves the rest of the shot as it was.
+    </p>
+    <p>
+      <a class="btn" href="https://apps.apple.com/app/id6818821287">Get it on the Mac App Store</a>
+    </p>
+    <p class="note">Free to download. Opening clips, finding what's wrong and fixing it are free, and so are your first 10 exports.</p>
+
+    <figure class="wide">
+      <video data-lazy controls muted loop playsinline preload="none" poster="alter-preview.jpg" width="1280" height="720" aria-label="The EditLab Alter App Store preview: a face that turns into someone else's caught and kept, a thing taken out with a click, a new background behind a woman on a beach, a face swapped in from a photo, and the review before export.">
+        <source src="alter-preview.mp4" type="video/mp4" />
+      </video>
+      <figcaption>The App Store preview, 17 seconds: real AI clips, fixed in Alter's own window.</figcaption>
+    </figure>
+
+    <h2>What it fixes</h2>
+    <p>These are the films on Alter's start screen. Each one is a real AI clip: the flaw first, then the fix.</p>
+    <ul class="films wide">
+      <li>
+        <video data-lazy controls muted loop playsinline preload="none" poster="films/face.jpg" width="640" height="256" aria-label="A woman's face in a café starts to change shape, marked Face changing, then is held as her own, marked Face steady."><source src="films/face.mp4" type="video/mp4" /></video>
+        <h3>Fix faces that morph</h3>
+        <p>A face that turns into someone else, or eyes and nose that wobble: kept the same person.</p>
+      </li>
+      <li>
+        <video data-lazy controls muted loop playsinline preload="none" poster="films/remove.jpg" width="640" height="256" aria-label="A stranger walks through a garden behind a woman reading on a bench, marked Shouldn't be there, then the garden plays with him taken out."><source src="films/remove.mp4" type="video/mp4" /></video>
+        <h3>Remove what shouldn't be there</h3>
+        <p>A stray cup, a stranger, a ball: taken out, the rest of the shot kept.</p>
+      </li>
+      <li>
+        <video data-lazy controls muted loop playsinline preload="none" poster="films/words.jpg" width="640" height="256" aria-label="A radio dial printed with 120 where it should say 110, marked Should say 110, then rewritten in the dial's own lettering, marked Now says 110."><source src="films/words.mp4" type="video/mp4" /></video>
+        <h3>Fix signs, labels and numbers</h3>
+        <p>Misspelled or garbled text in the picture, rewritten correctly in the same style.</p>
+      </li>
+      <li>
+        <video data-lazy controls muted loop playsinline preload="none" poster="films/flicker.jpg" width="640" height="256" aria-label="A woman in a night crowd as the light pulses brighter and darker, marked Light jumps, then made steady, marked Light steady."><source src="films/flicker.mp4" type="video/mp4" /></video>
+        <h3>Fix flickering light</h3>
+        <p>Light that pulses brighter and darker, made steady.</p>
+      </li>
+      <li>
+        <video data-lazy controls muted loop playsinline preload="none" poster="films/move.jpg" width="640" height="256" aria-label="A blue teapot on a kitchen table is carried back across the table, smaller further back."><source src="films/move.mp4" type="video/mp4" /></video>
+        <h3>Move things and people</h3>
+        <p>Carried somewhere else, smaller as it goes further back, or resized where it stands.</p>
+      </li>
+      <li>
+        <video data-lazy controls muted loop playsinline preload="none" poster="films/swap.jpg" width="640" height="256" aria-label="The screen in a car's dashboard, marked Swap this, then showing a new picture, marked Your picture."><source src="films/swap.mp4" type="video/mp4" /></video>
+        <h3>Add or swap things</h3>
+        <p>Something of yours from a photo, a bottle where the cup was, a picture on a screen.</p>
+      </li>
+      <li>
+        <video data-lazy controls muted loop playsinline preload="none" poster="films/shots.jpg" width="640" height="256" aria-label="A toy steam train rolls along its track, then rolls with smoke rising from its chimney and sparks at its wheels."><source src="films/shots.mp4" type="video/mp4" /></video>
+        <h3>Add smoke, sparks and explosions</h3>
+        <p>Smoke, sparks, laser fire or an explosion, stuck to the thing you click as it moves.</p>
+      </li>
+      <li>
+        <video data-lazy controls muted loop playsinline preload="none" poster="films/background.jpg" width="640" height="256" aria-label="A man on a city street, then the same man with a beach and sea behind him."><source src="films/background.mp4" type="video/mp4" /></video>
+        <h3>Change the background</h3>
+        <p>A new place behind the person, or a transparent background.</p>
+      </li>
+    </ul>
+    <p>And when a few seconds glitch or an ending falls apart, cut them out and keep the sound.</p>
+
+    <h2>How a fix works</h2>
+    <ol class="steps">
+      <li><strong>Open your clip.</strong> From Veo, Sora, Kling or any other generator. Alter looks it over as it opens and tells you what it finds.</li>
+      <li><strong>Point at what's wrong.</strong> Click it, draw round it, or say it in your own words: "his face changes from 8 to 12 s", "remove the ball at 3 s".</li>
+      <li><strong>See the fix before it lands.</strong> Every fix says what it will do, over which frames and how long, before you press Go. Then compare Before and After, and undo anything.</li>
+      <li><strong>Review, then export.</strong> Play each fix once more, then export. Your original clip is never changed.</li>
+    </ol>
+
+    <div class="shots wide">
+      <figure class="shot"><a href="shots/1-faces.jpg"><img src="shots/1-faces.jpg" width="1600" height="1000" loading="lazy" alt="Her face drifted. Alter keeps it hers. Alter's window flags the café woman's face changing at 3 seconds, beside close-ups of the drifted face and the kept one." /></a></figure>
+      <figure class="shot"><a href="shots/2-remove.jpg"><img src="shots/2-remove.jpg" width="1600" height="1000" loading="lazy" alt="A stranger walked in? Click him. Gone. Before: the man walking through the garden, outlined after one click. After: the garden with him gone." /></a></figure>
+      <figure class="shot"><a href="shots/3-add-effects.jpg"><img src="shots/3-add-effects.jpg" width="1600" height="1000" loading="lazy" alt="Add an explosion. It rides the car. Before: a red toy car clicked. After: an explosion and sparks on the car as it moves." /></a></figure>
+      <figure class="shot"><a href="shots/4-swap.jpg"><img src="shots/4-swap.jpg" width="1600" height="1000" loading="lazy" alt="Put your own picture on any screen. Before: a phone in a car mount. After: the phone showing a new picture." /></a></figure>
+      <figure class="shot"><a href="shots/5-review.jpg"><img src="shots/5-review.jpg" width="1600" height="1000" loading="lazy" alt="Check every fix. Then export. The review lists five fixes, each with a Play button, before Export." /></a></figure>
+    </div>
+    <p>
+      Save a project to keep the clip, your notes and every fix in one file,
+      and pick up where you left off, on this Mac or another one.
+    </p>
+
+    <h2>Plans</h2>
+    <ul>
+      <li><strong>Free:</strong> open clips, find what's wrong, fix it, and export your first 10 clips with a small EditLab mark</li>
+      <li><strong>EditLab Alter, $9.99 USD a month:</strong> keep exporting, with the small EditLab mark</li>
+      <li><strong>EditLab Alter Pro, $69.99 USD a month:</strong> keep exporting, with no mark</li>
+    </ul>
+    <p class="note">Subscriptions are handled by Apple and renew each month until you cancel.</p>
+
+    <h2>Requirements and privacy</h2>
+    <ul>
+      <li>A Mac with Apple silicon and macOS 26.5 or later</li>
+      <li>Everything runs on your Mac: no account, your clips never leave it, no data collected</li>
+    </ul>
+
+    <h2>For reviewers and creators</h2>
+    <p>
+      Writing about AI video or teaching people to make it? Email
+      <a href="mailto:markkaminsky99@gmail.com?subject=EditLab%20Alter%20review%20code">markkaminsky99@gmail.com</a>
+      for a Pro code.
+    </p>
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://apps.apple.com/app/id6818821287">EditLab Alter on the Mac App Store</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    <hr />
+    <p class="meta">&copy; 2026 Mark Kaminsky</p>
+  </main>
+  <script>
+    // Films play, muted and looping, while they are on screen, and load only then.
+    // Without this script, or for anyone who asks for less motion, they keep their
+    // controls and play when clicked.
+    (function () {
+      var films = Array.prototype.slice.call(document.querySelectorAll("video[data-lazy]"));
+      var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (still || !("IntersectionObserver" in window)) return;
+      films.forEach(function (v) {
+        v.muted = true;
+        if (v.closest(".films")) v.removeAttribute("controls");
+      });
+      var watch = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) {
+            v.preload = "auto";
+            var p = v.play();
+            if (p && p.catch) p.catch(function () { v.setAttribute("controls", ""); });
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      films.forEach(function (v) { watch.observe(v); });
+    })();
+  </script>
+</body>
+</html>
