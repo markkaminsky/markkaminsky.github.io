@@ -140,6 +140,16 @@
     @media (max-width: 720px) {
       .films, .shots { grid-template-columns: 1fr; }
     }
+      .claude {
+      margin: 2.25rem 0 0;
+      padding: 1.1rem 1.25rem;
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      border-radius: 0.6rem;
+    }
+    .claude h2 { margin-top: 0; }
+    .claude p { margin: 0 0 0.6rem; }
+    .claude p:last-child { margin-bottom: 0; }
   </style>
 </head>
 <body>
@@ -150,7 +160,7 @@
       <a href="privacy.html">Privacy</a>
     </nav>
     <h1>EditLab Alter</h1>
-    <p class="meta">For the Mac. Version 1.0.</p>
+    <p class="meta">For the Mac. Updated for version 1.1.</p>
     <p class="lead">Fix the one thing that ruined your AI clip. Keep the rest.</p>
     <p>
       An AI clip can be exactly what you wanted, and then one thing gives it
@@ -237,6 +247,17 @@
       and pick up where you left off, on this Mac or another one.
     </p>
 
+    <section class="claude" id="claude">
+      <h2>Works with Claude</h2>
+      <p>
+        Link Alter to the Claude app and talk the clip over: Claude looks at
+        it, finds what's wrong and fixes it with you, and every fix shows up in
+        Alter's window. Edit ▸ Undo takes any of it back, and your original file
+        is never changed.
+      </p>
+      <p class="note">Help ▸ Use EditLab Alter with Claude… · needs the Claude app for Mac · <a href="privacy.html#claude">what Claude sees</a></p>
+    </section>
+
     <h2>Plans</h2>
     <ul>
       <li><strong>Free:</strong> open clips, find what's wrong, fix it, and export your first 10 clips with a small EditLab mark</li>
@@ -248,6 +269,7 @@
     <h2>Requirements and privacy</h2>
     <ul>
       <li>A Mac with Apple silicon and macOS 26.5 or later</li>
+      <li>Working with Claude needs the Claude app for Mac</li>
       <li>Everything runs on your Mac: no account, no data collected, and your clips never leave it unless you link Alter to the Claude app</li>
     </ul>
 
