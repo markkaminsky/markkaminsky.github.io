@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — EditLab Tracker</title>
+  <meta name="description" content="EditLab Tracker's privacy policy, and the EditLab Tracker connector's for the Claude app: Tracker collects nothing, and your song leaves your Mac only if you link Tracker to the Claude app and allow it." />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <style>
     @font-face {
@@ -43,6 +44,7 @@
     h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
     ul { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
     a { color: inherit; }
     hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
     nav a { margin-right: 1rem; }
@@ -55,12 +57,13 @@
       <a href="support.html">Support</a>
     </nav>
     <h1>Privacy Policy</h1>
-    <p class="meta">EditLab Tracker · last updated 8 September 2026</p>
+    <p class="meta">EditLab Tracker, and the EditLab Tracker connector for the Claude app · last updated 31 October 2026</p>
     <h2>The short version</h2>
     <p>
       EditLab Tracker does not collect any data. Nothing you do in the app is
-      sent anywhere. There are no analytics, no telemetry, no accounts, no
-      advertising and no third-party SDKs of any kind.
+      sent to us. There are no analytics, no telemetry, no accounts, no
+      advertising and no third-party SDKs of any kind. The one way your song
+      leaves your Mac is the Claude link below, and only once you turn it on.
     </p>
     <h2>What the app stores, and where</h2>
     <p>Everything the app keeps stays on your own device:</p>
@@ -70,17 +73,36 @@
       <li><strong>Preferences and recovery data</strong> are kept in the app&rsquo;s own sandboxed storage on your device, so that unsaved work can be offered back to you after an unexpected quit.</li>
     </ul>
     <p>None of this leaves your device, and none of it is visible to the developer.</p>
+    <h2 id="claude">Claude, if you link it</h2>
+    <p>
+      Tracker can work with the Claude app for Mac, through the EditLab Tracker
+      connector that comes inside the app. The link is off until you choose
+      Help &gt; Use EditLab Tracker with Claude…, add the connector in the
+      Claude app, and click Allow when Tracker asks.
+    </p>
+    <ul>
+      <li><strong>What Claude gets.</strong> While the link is on, Claude can read the song open in Tracker, and what Tracker tells it about the song: its name, tempo and play order, its channels and notes, the names and lengths of its sounds, the mixer&rsquo;s settings, the steps in Edit &gt; Undo, and measurements Tracker takes of how part of the song sounds, such as its level, key and tuning. The song&rsquo;s audio itself is not sent. What Claude reads becomes part of your Claude chat, and is handled by Anthropic under your agreement with them: <a href="https://www.anthropic.com/legal/privacy" rel="noopener">anthropic.com/legal/privacy</a>.</li>
+      <li><strong>The connector.</strong> It runs on your Mac and talks only to Tracker, over a private connection that stays on your Mac (127.0.0.1). It collects nothing, and sends nothing anywhere else. The first time it connects, it makes a random key and keeps it on your Mac, so that Tracker can tell it is the connector you allowed.</li>
+      <li><strong>What we get.</strong> Nothing. The link runs between Tracker and the Claude app, on your Mac; nothing goes to EditLab.</li>
+      <li><strong>Ask Claude.</strong> A request you type into Tracker&rsquo;s ask bar and send with Ask Claude opens in a new chat in the Claude app, and nothing is sent until you send it there.</li>
+      <li><strong>Taking it back.</strong> Everything Claude changes is a normal edit you can take back with Edit &gt; Undo, and files are saved or exported only through Tracker&rsquo;s own Save and Export windows, which you confirm. Help &gt; Turn Off the Claude Link turns the link off, and you can remove the connector in the Claude app&rsquo;s settings.</li>
+    </ul>
     <h2>Network access</h2>
     <p>
-      The app makes no network requests. Its interface is loaded from files
-      inside the application bundle, and a Content-Security-Policy restricts it
-      to the bundle&rsquo;s own origin. There is no server component to this app.
+      The app makes no requests to the internet. Its interface is loaded from
+      files inside the application bundle, and a Content-Security-Policy
+      restricts it to the bundle&rsquo;s own origin. If you turn on the Claude
+      link, Tracker also accepts connections from the connector on your own
+      Mac (127.0.0.1) and nothing else. There is no server component to this app.
     </p>
     <h2>Artificial intelligence features</h2>
     <p>
       The app&rsquo;s assistant runs entirely on your device using Apple&rsquo;s
       FoundationModels framework. What you type into it is processed locally and
-      is not transmitted to the developer, to Apple, or to any other party.
+      is not transmitted to the developer, to Apple, or to any other party. The
+      models that take the vocal and the instruments apart when you split a song
+      also run on your Mac. Claude is used only through the link above, if you
+      turn it on.
     </p>
     <h2>Effect Designs</h2>
     <p>
